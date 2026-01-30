@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.projecthighlight{
+    width: 100%;
+    background: #f7f2ec;
+    padding: 50px 0px;
+}
+.projecthighlight h2{
+    text-align: center;
+    color: blue;
+}
+.project-mid{
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    
+}
+.project-item{
+    width: 20%;
+    text-align: center;
+    padding: 20px 0px;
+}
+.project-item img{
+    width: 100px;
+}
+
+.about-section{
+    width: 100%;
+    padding: 50px 0px;
+}
+.about-mid{
+    width: 1320px;
+    margin: auto;
+    gap: 5%;
+    display: flex;
+}
+.aboutimg{
+    width: 45%;
+    border: 1px solid red;
+}
+
+.aboutcontent{
+    width: 50%;
+}
+.aboutcontent h1{
+    margin-bottom: 30px;
+}
+.aboutcontent p{
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+.aboutimg img{
+    width: 100%;
+}
+.form-section{
+    width: 100%;
+    padding: 40px 0px;
+    background-color: rgb(14, 21, 91);
+}
+.form-mid{
+    width: 1320px;
+    margin: auto;
+}
+.form-mid h2{
+    color: white;
+}
+.form-mid form{
+    display: flex;
+    margin-top: 20px;
+    gap: 4%;
+}
+.inputitems{
+    width: 23%;
+}
+.inputitems input{
+    width: 100%;
+    padding: 10px;
+}
+.inputitems button{
+    width: 100%;
+    padding: 10px;
+    background: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

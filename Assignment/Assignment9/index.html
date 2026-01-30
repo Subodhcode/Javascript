@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="inner">
+            <form>
+                <fieldset>
+                    <legend>JOB APPLICATION FORM</legend>
+                    <div class="contain">
+                        <div class="user_info">
+                            <div class="info">
+                                <label>FIRST NAME</label>
+                                <input type="text" placeholder="ENTER YOUR FIRST NAME" id="text">
+                            </div>
+                            <div class="info">
+                                <label>LAST NAME</label>
+                                <input type="text" placeholder="ENTER YOUR LAST NAME" id="text">
+                            </div>
+                        </div>
+
+                        <div class="user_info">
+                            <div class="info">
+                                <label>EMAIL</label>
+                                <input type="email" placeholder="xyz@gmail.com"
+                                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" id="text">
+                            </div>
+                            <div class="info">
+                                <label>MOBILE NUMBER</label>
+                                <input type="tel" placeholder="012-345-6789" pattern="[0-9]{10}" id="text">
+                            </div>
+                        </div>
+
+                        <div class="user_info">
+                            <div class="info">
+                                <label>DOB</label>
+                                <input type="date" id="text" >
+                            </div>
+                            <div class="info">
+                                <label>STATE</label>
+                                <select class="inputtag">
+                                    <option>SELECT</option>
+                                    <option>ANDHRA PRADESH</option>
+                                    <option>GUJARAT</option>
+                                    <option>MAHARASTHRA</option>
+                                    <option>BIHAR</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="user_info">
+                            <div class="info">
+                                <label>GENDER</label>
+                                <div class="inputbox">
+                                    <input type="radio" name="gneder" value="male" id="checkbox"> &nbsp;MALE
+                                    <input type="radio" name="gneder" value="femal" id="checkbox"> &nbsp;FEMALE
+                                    <input type="radio" name="gneder" value="other" id="checkbox"> &nbsp;OTHER
+                                </div>
+                            </div>
+                        </div>
+
+                           <div class="user_info">
+                            <div class="info">
+                                <label>ADDRESS</label>
+                                <textarea placeholder="ENTER YOUR ADDRESS"></textarea>
+                            </div>
+                        </div>
+
+                         <div class="user_info">
+                            <div class="info">
+                                <label>QUALIFICATION</label>
+                                <div class="inputbox">
+                                    <input type="radio" name="qualification" value="10" id="checkbox"> &nbsp;10 <sup>TH</sup>
+                                    <input type="radio" name="qualification" value="12" id="checkbox"> &nbsp;12 <sup>TH</sup>
+                                    <input type="radio" name="qualification" value="UNDER GRADUATE" id="checkbox"> &nbsp;UNDER GRADUATE
+                                    <input type="radio" name="qualification" value="UNDER GRADUATE" id="checkbox"> &nbsp;POST GRADUATE
+                                </div>
+                            </div>
+                        </div>
+
+                          <div class="user_info">
+                            <div class="info">
+                                <label>UPLOAD IMAGE</label>
+                                <div class="inputbox">
+                                    <input type="file" name="file" value="10" id="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn">
+                            <button>SAVE</button>
+                            <button>RESET</button>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

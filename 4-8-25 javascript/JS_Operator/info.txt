@@ -1,0 +1,3 @@
+operator, types of operator, example
+
+modolus-->remainder value, increment ++>, expontential-->power nikal na

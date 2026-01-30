@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*  1)array->In JavaScript, an array is a data structure used to store multiple values in a single variable, ordered by index.
+  
+        Basic idea
+        
+        An array can hold values like numbers, strings, objects, or even other arrays.*/
+
+        //  let l=[20,10,15,66,99,70,"Hello",true,undefined,[25,77,99,88]]
+
+        // console.log(l[1]);
+
+        //2
+        // let l=[25,68,99,55,[66,88,55,25],66,10]
+        // console.log(l[4][2]);
+
+        //3
+        // let l=[20,25,30,40,90]
+
+        // let t=l.length;//5
+
+        // for(let i=0;i<t;i++){
+        //     console.log(i,l[i]);
+        // }
+        
+        // console.log("Reverse order");
+
+        // for(i=t-1;i>=0;i--){
+        //     console.log(i,l[i]);
+        // }
+
+        //of value pass karta hai
+        // for(let v of l){
+        //     console.log(v)
+        // }
+
+        //in pass index number
+        //    for(let k in l){
+        //     console.log(k,l[k])
+        // }
+        
+
+        //task1 max value
+        // let l=[10,25,99,77,65,55,21]
+
+        // let maxvalue=l[0]//10
+        // for(let v of l){
+        //     if(v>maxvalue){
+        //         maxvalue=v;
+        //     }
+        // }
+
+        // // //Round1 10>10 False maxvalue=10
+        // // //Round2 10>25 true maxvalue=25
+        // // //Round3 99>25 true
+        // console.log(maxvalue);
+
+        
+
+        //task2
+        // let l=[10,20,30,40,50];
+        // l.push(45,65,48,59)
+        // l.push(99)//[10,20,30,40,50,99]//push means to add data at the last
+        // l.push(33)
+        // console.log(l)
+
+        //  let l=[10,20,30,40,50]
+        //  console.log(l.pop())//array last element delete | Element return
+        //  console.log(l)
+
+
+        let l=[1,2,3,4]
+         for(let v of l){
+            l.pop();
+         }
+         console.log(l)
+    </script>
+</body>
+
+</html>

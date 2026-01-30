@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let CurrentDate = new Date();
+    console.log(CurrentDate)
+    console.log(CurrentDate.getFullYear())
+    // console.log(CurrentDate.getMonth())
+
+    let monthIndex=CurrentDate.getMonth()
+    let months = ["jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    console.log(months[monthIndex]);
+
+    console.log(CurrentDate.getDate())
+    let hours=CurrentDate.getHours()
+
+    let finalout=(hours>12)? (hours-12)+"PM":hours+"AM";
+    console.log(finalout)
+
+    console.log(CurrentDate.getMinutes())
+    console.log(CurrentDate.getSeconds())
+    console.log(CurrentDate.getMilliseconds())
+
+    let allMillisecond=CurrentDate.getTime();//1000
+    console.log(allMillisecond)
+
+    console.log(CurrentDate.getDay())
+
+    let fdate=new Date("Fri Jan 23 2026 00:33:06 GMT+0530  ")
+    console.log(fdate.getTime()/1000)
+
+</script>
+
+</html>

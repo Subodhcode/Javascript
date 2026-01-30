@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstline</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            width: 600px;
+            height: auto;
+            border: 0.1px solid red;
+            margin: 50px auto;
+            padding: 20px;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: justify;
+        }
+        p::first-line{
+            font-size: 50px;
+            color: red;
+        }
+        p::first-letter{
+            color: black;
+            font-size: 80px;
+        }
+        ::selection{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non possimus id necessitatibus soluta pariatur, laborum harum repellendus iusto iste ab consequuntur, expedita similique exercitationem rerum molestias voluptatum? Aut modi, quisquam sapiente natus alias accusantium doloremque debitis dignissimos nesciunt ipsam, similique consectetur deleniti sit ipsa saepe. Ratione hic quam maxime.
+    </p>
+</body>
+</html>

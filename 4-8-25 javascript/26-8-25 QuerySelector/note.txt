@@ -1,0 +1,3 @@
+addeventlistener(),event lagayega(event name,call back function), callback function, it works on action
+
+kisi function ke parameter ke andar koi or function call ho rha hai usse call back function bolte hai

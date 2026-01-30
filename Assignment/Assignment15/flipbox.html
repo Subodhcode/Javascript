@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            border: 10px solid red;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .img1 {
+           transition: 0.5s;
+           transform: scale(0) rotateX(0deg);
+            width: 100%;
+            height: 100%;
+          
+        }
+        .img2{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: 0.5s;
+            height: 100%;
+            width: 100%;
+        }
+         .main:hover .img1{
+            transform:scale(1) rotateX(180deg);
+        }
+        .main:hover .img2{
+            transform: rotateY(180deg) scale(0);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="gallery_img/1.jpg" alt="" class="img1">
+        <img src="gallery_img/2.jpg" alt="" class="img2">
+    </div>
+</body>
+
+</html>

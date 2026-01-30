@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+main{
+    width: 100%;
+}
+header{
+    width: 100%;
+}
+nav{
+    width: 100%;
+   
+}
+.navbar{
+    width: 1270px;
+
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo>img{
+    width: 150px;
+}
+
+.menubar>ul{
+    display: flex;
+    width: 100%;
+}
+
+.menubar>ul>li{
+    padding: 10px 15px;
+    font-size: 22px;
+    margin:10px ;
+    font-weight: 500;
+}
+
+.banner{
+    width: 100%;
+    border: 0.1 solid black;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 200px 0px;
+    background: url(/image/the-town-bg-01.jpg)   ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    background-size: cover;
+   
+}
+
+.mainmiddle{
+    width: 100%;
+    margin: 50px auto;
+ 
+}
+
+.middlesection{
+    width: 1270px;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    border: 0.1px solid black;
+    display: flex;
+}
+
+figure{
+    width: 45%;
+    height: 100%;
+    
+}
+
+aside{
+    width: 45%;
+    height: 100%;
+
+}
+
+figure>img{
+    width: 100%;
+    height: 100%;
+}
+
+.heading{
+    font-size: 40px;
+    color: rgb(31, 235, 235);
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+article{
+    font-size: 28px;
+    padding: 20px 0px;
+    text-align: justify;
+}
+
+button{
+    font-size: 25px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(21, 201, 237);
+    margin: 20px 0px;
+    border-radius: 18px;
+    border: none;
+}
+
+
+footer{
+    width: 100%;
+    border: 0.1 solid red;
+}
+.footmid{
+    width: 1000px;
+    margin: auto;
+}
+.footerr1{
+    width: 100%;
+}
+
+.footer_r1_c1{
+    height: 100%;
+}

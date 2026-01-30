@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    
+    <script>
+
+        let status=true;
+        let userNum=Number(prompt("Enter The Number:-"))
+        let midvalue=parseInt(userNum/2)
+        for (let i=2;i<=midvalue;i++){
+            if(userNum%i==0){
+                status=false;
+                break;
+            }
+        }
+
+        if(status){
+            console.log(userNum,"Prime Number");
+        }
+        else{
+            console.log(userNum,"Not a Prime Number");
+        }
+    </script>
+</body>
+</html>

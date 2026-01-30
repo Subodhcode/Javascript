@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="displayName()">Save</button>
+    <script>
+        //Hoiesting, it works only on var,it works on function
+       /* var a
+
+        console.log(a)
+
+        var a=10*/
+        //1.
+        // displayName()//Hoiesting
+        // function displayName(){
+        //     var a=10;
+        //     console.log(a,"Subodh")
+        // }
+        // displayName()
+
+
+        //2
+        // function addData(num1,num2 ){//argument,function banta hai tho argument
+        //     console.log(num1+num2);
+        // }
+        // addData(25,58)//paramter call
+        // addData(100,200)
+        // Number()//string digit convert number
+        
+
+
+        //3
+        // function sqv(num){
+        //     console.log(num**2)
+        // }
+        // sqv(5)
+        // sqv(10)
+
+
+        //4
+        // function getPowerValue(num,power){
+        //     console.log(num**power);
+        // }
+        // getPowerValue(10,3)
+
+
+        //5 return type
+       // Number("10")//return le kar aata hai, ye value ko hold karta hai
+
+       //6
+    //    function squarevalue(num){
+    //     return num**2
+    //    }
+    //    console.log(squarevalue(10))//call value hold ->1
+
+    //7 user product price 500
+    //  user taxrate =10
+    //  user tax cal =50
+    // user total price =500+50=550
+
+       
+
+        // let price=Number(prompt("Enter The Profuct Price:--"))//5000
+        // let tax=Number(prompt("Enter the tax rate:--"))//10
+
+        // let taxcalData=taxCal(price,tax)
+        // console.log(`
+        //     Product Price ${price}
+        //     Product Tax Rate ${tax}
+        //     Product Tax Price ${taxcalData}
+        //     Final Total ${price+taxcalData}
+        // `)
+
+
+        // let n=0
+        // function taxCal(productPrice,taxrate=5){
+        //      n=100
+        //     return productPrice*taxrate/100//500
+           
+        // }
+        // taxCal(8000)
+
+        // getData()
+        // function getData(){
+        //     console.log(n);
+        // }
+
+        // console.log(taxCal(500,10));
+
+
+        function addData(a=0,b=0){
+            return a+b
+        }
+        console.log(addData());
+        console.log(addData(25,50));
+
+
+     
+
+    </script>
+</body>
+</html>

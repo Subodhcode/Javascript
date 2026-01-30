@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <style>
+        .main{
+            width: 1320px;
+            margin: auto;
+            height: 500px;
+            border: 1px solid red;
+        }
+        .mainleft{
+            width: 650px;
+            float: left;
+            height: 500px;
+        }
+        .mainright{
+            width: 650;
+            float: right;
+            height: 500px;
+        }
+        .inputouter{
+            width: 620px;
+            margin: 20px 10px;
+            height: 55px;
+        }
+        .inputinner{
+            width: 290px;
+            height: 55px;
+            float: left;
+            margin-left: 10px;
+        }
+        .input{
+            width: 280px;
+            height: 30px;
+            border-radius:5px ;
+        }
+        .textarea{
+            width:580px;
+            height: 80px;
+            margin-left: 20px;
+        }
+        .inputoutertextarea{
+            width: 620px;
+            margin: 20px 10px;
+            height: 100px;
+        }
+        .btnouter{
+            text-align: center;
+        }
+        .btn{
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="mainleft">
+            <form>
+                <div class="inputouter">
+                    <div class="inputinner">
+                        <label for="name">Name</label>
+                        <input type="text" autofocus class="input" placeholder="Enter Your Name" maxlength="10">
+                    </div>
+                    <div class="inputinner">
+                        <label for="name">Mobile Number</label>
+                        <input type="tel" class="input" value="+91">
+                    </div>
+                </div>
+                <div class="inputouter">
+                    <div class="inputinner">
+                        <label for="name">Email Address</label>
+                        <input type="email" class="input" disabled value="subodht@gmail.com">
+                    </div>
+                    <div class="inputinner">
+                        <label for="name">Purpose</label>
+                        <select name="" id="" class="input" multiple>
+                            <option value="">Select Purpose</option>
+                            <option value="">Course</option>
+                            <option value="">App</option>
+                            <option value="">Website</option>
+                            <option value="">Digital Marketing</option>
+                            <option value="">AI</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="inputoutertextarea">
+                    <label for="">Message</label>
+                    <textarea class="textarea"></textarea>
+                </div>
+                <div class="inputoutertextarea">
+                    <label for="">course</label>
+                    <datalist id="course">
+                        <option value="js"></option>
+                        <option value="php"></option>
+                        <option value="digital"></option>
+                        <option value="marketing"></option>
+                    </datalist>
+                    <input type="text" class="input" list="course">
+                </div>
+                <div class="btnouter">
+                    <button class="btn">Send Message</button>
+                </div>
+         </div>
+            </form>
+    </div>
+        <div class="mainright"></div>
+    </div>
+</body>
+</html>

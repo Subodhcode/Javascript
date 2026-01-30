@@ -1,0 +1,12 @@
+Data types in js
+1.primitive(single variable ) 
+    Number interger(10,20,30) | float(10.30)
+
+
+
+
+2.non primitive(multible varaible)
+    array[]
+    object
+
+    promp-->user  se input lena(string me leta hai)js predeined function hai

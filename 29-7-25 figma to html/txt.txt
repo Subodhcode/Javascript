@@ -1,0 +1,7 @@
+
+background: linear-gradient(93.77deg, #0ACEFE -6.36%, #2699FB 50.16%);
+
+display:gradient
+gap
+aliten-team
+justify-content

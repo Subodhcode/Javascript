@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin: auto;
+            position: relative;
+        }
+        .main img{
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            width: 100%;
+            height: 300px;
+            background-color: rgba(0, 0,0, 0.5);
+            position: absolute;
+            top: 0px;
+            color: white;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            transition: 0.5s;
+            transform: scale(0);
+            transform-origin: top;
+        }
+        .main:hover .content{
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="gallery_img/classroom-training.webp" alt="">
+        <div class="content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum voluptas nemo corrupti nam quaerat, quia quod voluptates facere magni iusto officia eligendi consectetur harum ducimus, dolore rem expedita. Reprehenderit commodi aliquid voluptatibus sit natus omnis molestiae magnam dolorum odio magni saepe voluptas laudantium iusto deleniti blanditiis aperiam exercitationem, aspernatur ex.
+        </div>
+    </div>
+</body>
+</html>

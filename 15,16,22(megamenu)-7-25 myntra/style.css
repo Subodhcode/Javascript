@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 80px;
+}
+.floatIcons{
+    position: fixed;
+    right: 0px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bell_icon{
+    width: 44px;
+    height: 44px;
+    background-color: rgb(29, 133, 252);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+}
+
+.facebook{
+    width: 44px;
+    height: 44px;
+    background-color: rgb(24, 119, 242);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    margin: 10px 0px;
+    padding-top: 10px;
+}
+
+.whatsapp {
+    width: 44px;
+    height: 44px;
+    background-color: rgb(37, 211, 102);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+    margin: 10px 0px;
+}
+.telegram {
+    width: 44px;
+    height: 44px;
+    background-color: rgb(42, 171, 238);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 10px;
+    color: white;
+    margin: 10px 0px;
+}
+header{
+    width: 100%;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0px 2px 10px 0px #ccc;
+    background: white;
+    position: fixed;
+    top: 0px;
+}
+.headerleft{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.headerleft>nav>ul{
+    display: flex;
+    gap: 30px;
+}
+
+
+.headerleft>nav>ul>li>a{
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.headerleft>nav>ul>li{
+    padding: 25px 10px;
+}
+/* .headerleft>nav>ul>li:hover{
+    border-bottom: 3px solid green;
+} */
+.headerleft>nav>ul>li:nth-child(1):hover{
+    border-bottom: 3px solid green;
+}
+.headerleft>nav>ul>li:nth-child(2):hover{
+    border-bottom: 3px solid blue;
+}
+.headerleft>nav>ul>li:nth-child(3):hover{
+    border-bottom: 3px solid red;
+}
+.headerleft>nav>ul>li:nth-child(4):hover{
+    border-bottom: 3px solid aqua;
+}
+.headerleft>nav>ul>li:nth-child(5):hover{
+    border-bottom: 3px solid yellowgreen;
+}
+.headerleft>nav>ul>li:nth-child(5):hover{
+    border-bottom: 3px solid rgb(225, 105, 125);
+}
+.headerleft>nav>ul>li:nth-child(6):hover{
+    border-bottom: 3px solid orange;
+}
+.headerleft>nav>ul>li:nth-child(7):hover{
+    border-bottom: 3px solid rgb(184, 37, 221);
+}
+.headerleft>nav>ul>li:hover .megamenu{
+    /* transform: scaleY(1); */
+    display: flex;
+
+}
+.megamenu{
+    position: absolute;
+    width: 90%;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    left: 5%;
+    top: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* transform: scaleY(0); */
+    display: none;
+    transform-origin: top;
+    transition: 0.5s;
+}
+.menumenuitem{
+    flex-basis: 20%;
+    
+}
+.menumenuitem h4{
+    color: red;
+    margin-bottom: 15px;
+}
+.menumenuitem ul li{
+    font-size: 13px;
+    padding:5px 0px ;
+}
+.menumenuitem ul li a{
+    color: black;
+}
+.headerright{
+    flex-grow: 1;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.headerright form{
+    flex-grow: 1;
+    display: flex;
+    box-shadow: 0px 0px 10px 2px #ccc;
+    border-radius:5px ;
+}
+.headerright form button{
+    padding: 14px;
+    border: none;
+    background: transparent;
+}
+.headerright form input{
+    flex-grow: 1;
+    padding-left: 10px;
+    border: none;
+    background: transparent;
+}
+.profileicons{
+    flex-basis: 30%;
+    
+}
+.profileicons ul{
+     display: flex;
+     gap: 15px;
+ 
+}
+.profileicons ul li{
+    display: flex;
+    flex-grow: 1;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;/*width*/
+    justify-content: center;/*height*/
+    
+}
+.profileicons ul li b{
+    font-size: 12px;
+}
+
+
+.bannersection{
+    width: 100%;
+    padding: 30px 0px;
+}
+.bannermid{
+    width: 1420px;
+    margin: auto;
+}
+.bannermid img{
+    width: 100%;
+}
+.offerbanner{
+    width: 1420px;
+    margin: auto;
+}
+.offerbanner img{
+    width: 100%;
+}
+.offerbannerImg{
+    display: flex;
+    width: 1420px;
+    margin: auto;
+    gap: 10px;
+    flex-grow: 1;
+}
+.offerbannerImg figure img{
+    width: 100%;
+
+}
+footer{
+    background:#f9fafb;
+    padding: 40px 0px;
+}
+.footermid{
+    width: 1080px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+
+}
+.footermidpart1{
+    flex-basis: 20%;
+}
+.footermidpart1 h4{
+    margin-bottom: 20px;
+}
+.footermidpart1 ul li{
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.footermidpart1 ul{
+    margin-bottom: 40px;
+}
+.footermidpart1 ul li a{
+    color: black;
+}
+
+.footermidpart1 .appstore{
+    display: flex;
+    gap: 8px;
+    
+}
+.footermidpart1 .appstore img{
+    width: 100%;
+
+}
+.appstore{
+}
+.appstore i{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.footermid4part{
+    display: flex;
+    padding-bottom: 20px;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.footermid4part p{
+    font-size: 12px;
+}
+.footer-row3{
+    display: flex;
+    gap: 15px;
+    width: 1080px;
+    margin: auto;
+    margin-bottom: 25PX;
+}
+.line{
+    background: #ccc;
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 5px;
+}
+
+.footer-row4{
+    width: 1080px;
+    margin: auto;
+    text-align: justify;
+    line-height: 23px;
+    padding-bottom: 40px;
+}
+
+.footer-row5{
+    display: flex;
+    width: 1080px;
+    margin: auto;
+    justify-content: space-between;
+}
+.productpage{
+    width: 100%;
+    padding: 30px 0px;
+  
+}
+.productitem{
+    display: flex;
+    width: 1420px; 
+    margin: auto;
+    gap: 10px;
+}
+.productitem figure img{ 
+    width: 100%;
+}

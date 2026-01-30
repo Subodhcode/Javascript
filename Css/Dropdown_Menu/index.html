@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown_menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        .menu{
+            width: 1170px;
+            margin: auto;
+        }
+        .menu>ul{
+            display: flex;
+            background-color: red;
+        }
+        .menu>ul>li{
+            padding: 15px 25px;
+            color: white;
+            position: relative;
+            cursor: pointer;
+        }
+        .submenu{
+            position: absolute;
+            background-color: rgb(50, 205, 140);
+            width: 200px;
+            top: 100%;
+            left: 0px;
+            opacity: 0;
+            transition: 0.5s;
+            visibility: hidden;
+            transform: translateY(50px);
+        }
+        .submenu>li{
+            padding: 10px;
+
+        }
+        .submenu>li:hover{
+            background-color: rgb(111, 113, 108);
+        }
+         .menu>ul>li:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+         }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>
+                Course
+                <ul class="submenu">
+                    <li>Mern</li>
+                    <li>Js</li>
+                    <li>Html</li>
+                    <li>Python</li>
+                </ul>
+            </li>
+            <li>Gallery</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1320px;
+            margin: auto;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .overlay {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 05.);
+            opacity: 0;
+            z-index: -9;
+            transition: 0.5s;
+        }
+
+        .lightBoxModal {
+            width: 1000px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transition: 1s;
+            transform: translate(-50%, -50%) scale(0);
+
+        }
+
+        .lightBoxModal span {
+            font-size: 40px;
+            position: absolute;
+            right: 0px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .lightBoxModal img {
+            width: 100%;
+        }
+
+        .overlayshow {
+            opacity: 1;
+            z-index: 9;
+        }
+
+        .lightBoxModalshow {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay ">
+        <div class="lightBoxModal">
+            <span>&times;</span>
+            <img src="https://picsum.photos/400/300?random=1" alt="Image 1">
+        </div>
+    </div>
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=1" alt="Image 1">
+            <div class="caption">Image Caption 1</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=2" alt="Image 2">
+            <div class="caption">Image Caption 2</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=3" alt="Image 3">
+            <div class="caption">Image Caption 3</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=4" alt="Image 4">
+            <div class="caption">Image Caption 4</div>
+        </div>
+    </div>
+    <!-- Event objet jab bhi add event listener ke saaath kaam karte hai 
+ clentx:649 distance form left in screen
+ target:img-->
+</body>
+<script>
+    let mainGallery = document.querySelector(".gallery")
+    let overlayElement = document.querySelector(".overlay")
+    let lightBoxModal = document.querySelector(".lightBoxModal")
+    let lightBoxModalIMG = document.querySelector(".lightBoxModal img")
+    let closeBtn = document.querySelector(".lightBoxModal span")
+    mainGallery.addEventListener("click", (event) => {
+        // console.log(event.target.src)
+        if (event.target.src) {
+            let currentSrc = event.target.src
+            overlayElement.classList.add('overlayshow')
+            lightBoxModal.classList.add('lightBoxModalshow')
+            lightBoxModalIMG.src = currentSrc
+        }
+    })
+
+    closeBtn.addEventListener("click", () => {
+        overlayElement.classList.remove('overlayshow')
+        lightBoxModal.classList.remove('lightBoxModalshow')
+        // lightBoxModalIMG.src=''
+    })
+
+    overlayElement.addEventListener("click", () => {
+        overlayElement.classList.remove('overlayshow')
+        lightBoxModal.classList.remove('lightBoxModalshow')
+    })
+
+    lightBoxModal.addEventListener("click", (e) => {
+        e.stopPropagation()//parent ka click kaam nhi karegaa
+    })
+
+    // if("hello"){//true
+
+    // }
+
+    // if(undefined){//false
+
+    // }
+</script>
+
+</html>

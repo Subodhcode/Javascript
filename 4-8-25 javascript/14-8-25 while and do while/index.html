@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //while loop and do while loop
+    //    1) let s=1
+    //     while(s<=10){
+    //         console.log(s,"Subodh");
+    //         s++;
+    //     }
+
+        //2
+        while(true){
+            let userCh=Number(prompt(
+                `
+                1 Game Start
+                2 Login
+                3 Register
+                4 Exit
+
+                `
+            ))
+            if(userCh==1){
+                console.log("Game Logic");
+            }
+            else if(userCh==2){
+                console.log("Login Logic");
+            }
+            else if(userCh==3){
+                console.log("Register Logic");
+            }
+            else if(userCh==4){
+                break
+            }
+            else{
+                console.log("invalid logic");
+            }
+        }
+    </script>
+</body>
+</html>

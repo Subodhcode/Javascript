@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Span Demo</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+      grid-auto-rows: 100px; /* each row 100px tall */
+      gap: 10px;
+    }
+
+    .item {
+      background: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      border: 2px solid navy;
+      border-radius: 8px;
+    }
+
+    .span2 {
+      grid-column-end: span 2; /* cover 2 columns */
+      background: lightcoral;
+    }
+
+    .span3 {
+      grid-row-end: span 3; /* cover 3 rows */
+      background: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>Grid Span Example</h2>
+  <div class="grid">
+    <div class="item">1</div>
+    <div class="item span2">2 (span 2 cols)</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item span3">5 (span 3 rows)</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+  </div>
+</body>
+</html>

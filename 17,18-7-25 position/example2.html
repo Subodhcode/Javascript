@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.category-section{
+    width: 100%;
+    padding: 30px 0px;
+    background: #f2f2f6;
+}
+.category-section h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.category-mid{
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.category-mid figure{
+    flex-basis: 33.33%;
+    position: relative;
+    overflow: hidden;
+}
+.category-mid figure img{
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+   
+}
+.category-mid  figcaption{
+    background: #1718181f;
+    position: absolute;
+    color: white;
+    left: 0px;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+.category-mid figure:hover figcaption{
+    background: #171818a3;
+    top: 0%;
+}
+.category-mid figure:hover img{
+    scale: 1.2;
+   
+}
+    </style>
+</head>
+<body>
+    <section class="category-section">
+        <h2>Discover Solachey</h2>
+        <div class="category-mid">
+            <figure>
+                <img src="https://solachey.com/wp-content/uploads/2025/02/HVAC-Products.png" alt="">
+                <figcaption><h2>HVAC Products</h2></figcaption>
+            </figure>
+            <figure>
+                <img src="https://solachey.com/wp-content/uploads/2025/02/HVAC-Products.png" alt="">
+                <figcaption><h2>HVAC Products</h2></figcaption>
+            </figure>
+            <figure>
+                <img src="https://solachey.com/wp-content/uploads/2025/02/HVAC-Products.png" alt="">
+                <figcaption><h2>HVAC Products</h2></figcaption>
+            </figure>
+            <figure>
+                <img src="https://solachey.com/wp-content/uploads/2025/02/HVAC-Products.png" alt="">
+                <figcaption><h2>HVAC Products</h2></figcaption>
+            </figure>
+            <figure>
+                <img src="https://solachey.com/wp-content/uploads/2025/02/HVAC-Products.png" alt="">
+                <figcaption><h2>HVAC Products</h2></figcaption>
+            </figure>
+            <figure>
+                <img src="https://solachey.com/wp-content/uploads/2025/02/HVAC-Products.png" alt="">
+                <figcaption><h2>HVAC Products</h2></figcaption>
+            </figure>
+        </div>
+    </section>
+</body>
+</html>

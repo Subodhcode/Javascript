@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After & Before</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width:900px;
+            border: 0.1px solid red;
+            margin: 50px auto;
+            font-size: 30px;
+            text-align: center;
+            padding: 15px 0px;
+        }
+        /* .heading{
+            color: red;
+            font-size: 40px;
+            font-style: italic;
+        } */
+         .main::after{
+            content: 'wscubetech';
+            color: red;
+            font-size: 50px;
+            font-style: italic;
+         }
+         .main::before{
+            content: 'Hello Everyone!';
+            color: blue;
+            font-size: 60px;
+            font-style: italic;
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+        Welcome To </span> 
+    </div>
+</body>
+</html>

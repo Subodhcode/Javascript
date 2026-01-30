@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 800px;
+            height: 300px;
+            background-color: aqua;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(106, 135, 230);
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(51, 208, 83);
+        }
+        /* .box1:hover{
+            border:10px solid black;/*self
+        }
+        .main:hover{
+            background-color: yellow;
+        } */
+
+        /* .main:hover .box2{
+            background-color: pink;/*child
+        } */
+
+        /* .box1:hover + .box2{
+            background-color: #fff;/*next sibling
+        } */
+
+
+        .box1:hover~.box3{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

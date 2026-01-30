@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function myfunction(name,myCallbackFun){
+        //     console.log("subodh")
+
+        //     myCallbackFun(name)
+        // }
+
+        // let setName=(name)=>{
+        //     console.log("Wlecome",name)
+        // }
+
+        // myfunction("Pradeep",setName)
+
+
+
+
+        //2
+         function myfunction(name,myCallbackFun){
+            console.log("subodh")
+
+            myCallbackFun(name)
+        }
+
+        let setName=(name)=>{
+            console.log("Wlecome",name)
+        }
+        setTimeout(myfunction,2000,"Thakur",setName)
+        setName("Pradeep");
+         myfunction("Pradeep",setName)
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .outer{
+            width: 1320px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .outer_items{
+            flex-basis: 30%;
+            margin: 1.5%;
+        }
+        .imgdiv img{
+            width: 100%;
+            transition: 0.5s;
+           
+        }
+        .imgdiv{
+            width: 100%;
+            overflow: hidden;
+        }
+        .imgdiv:hover img{
+            transform:scale(1.5) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="outer_items">
+            <div class="imgdiv">
+                <img src="gallery_img/1.jpg" alt="">
+            </div>
+        </div>
+       <div class="outer_items">
+            <div class="imgdiv">
+                <img src="gallery_img/2.jpg" alt="">
+            </div>
+        </div>
+        <div class="outer_items">
+            <div class="imgdiv">
+                <img src="gallery_img/3.jpg" alt="">
+            </div>
+        </div>
+        <div class="outer_items">
+            <div class="imgdiv">
+                <img src="gallery_img/4.jpg" alt="">
+            </div>
+        </div>
+        <div class="outer_items">
+            <div class="imgdiv">
+                <img src="gallery_img/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="outer_items">
+            <div class="imgdiv">
+                <img src="gallery_img/6.jpg" alt="">
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

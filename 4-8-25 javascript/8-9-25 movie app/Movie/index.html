@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieTube</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    nav {
+      background: #202020;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      color: red;
+      margin: 0;
+    }
+
+    .search-box input {
+      padding: 8px;
+      width: 250px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+    }
+
+    .slider {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .movie-card {
+      background: #181818;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .movie-title {
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer {
+      background: #202020;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    @media(max-width:600px){
+      .search-box input {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>MovieTube</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Search movies..." />
+    </div>
+  </nav>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="https://picsum.photos/id/1011/1200/300" />
+      <img src="https://picsum.photos/id/1012/1200/300" />
+      <img src="https://picsum.photos/id/1013/1200/300" />
+    </div>
+  </div>
+
+  <div class="movies">
+    <!-- 20 Movie Thumbnails -->
+    <div class="movie-card"><img src="https://picsum.photos/id/100/300/400" /><div class="movie-title">Avengers</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/101/300/400" /><div class="movie-title">Batman</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/102/300/400" /><div class="movie-title">Joker</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/103/300/400" /><div class="movie-title">Spiderman</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/104/300/400" /><div class="movie-title">Thor</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/105/300/400" /><div class="movie-title">Iron Man</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/106/300/400" /><div class="movie-title">Hulk</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/107/300/400" /><div class="movie-title">Black Panther</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/108/300/400" /><div class="movie-title">Doctor Strange</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/109/300/400" /><div class="movie-title">Captain America</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/110/300/400" /><div class="movie-title">Fast & Furious</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/111/300/400" /><div class="movie-title">John Wick</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/112/300/400" /><div class="movie-title">Inception</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/113/300/400" /><div class="movie-title">Interstellar</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/114/300/400" /><div class="movie-title">Titanic</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/115/300/400" /><div class="movie-title">Avatar</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/116/300/400" /><div class="movie-title">Gladiator</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/117/300/400" /><div class="movie-title">Rocky</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/118/300/400" /><div class="movie-title">Harry Potter</div></div>
+    <div class="movie-card"><img src="https://picsum.photos/id/119/300/400" /><div class="movie-title">Transformers</div></div>
+  </div>
+
+  <footer>
+    © 2026 MovieTube | Built with HTML & CSS
+  </footer>
+
+</body>
+<script src="app.js"></script>
+</html>

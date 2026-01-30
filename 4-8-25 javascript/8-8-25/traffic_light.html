@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let light=prompt(
+        `
+            1 Red -> Stop
+            2 Yellow -> Ready For Go
+            3 Green ->Go
+        
+        `
+        ).toLocaleLowerCase()
+
+        //"HELLO".toLowerCase() ->hello
+        if(light=="red"){
+            console.log("Stop");
+        }
+        else if(light=="yellow"){
+            console.log("Ready");
+        }
+        else if(light=="green"){
+            console.log("Go")
+        }
+        else{
+            console.log("invalid")
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: yellow;
+            color: red;
+            padding: 10px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Add class</button>
+    <button>Remove Class</button>
+    <button>Toggle class</button>
+    <!-- /*classlist obejct->add(),remove(),toggle()*/ -->
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sint nobis pariatur rerum, provident in ipsam
+        libero, adipisci doloremque, sequi illo aspernatur! Nulla quas repellat consequuntur sint. Et id illum ipsa
+        provident tempora? Alias exercitationem cum architecto reiciendis numquam culpa sit quos ex, perferendis
+        expedita, quibusdam tempora, impedit amet sequi?</p>
+</body>
+<script>
+    let btn1Element = document.querySelector("button:nth-child(1)")
+    let btn2Element = document.querySelector("button:nth-child(2)")
+    let btn3Element = document.querySelector("button:nth-child(3)")
+    let pTag = document.querySelector("p")
+    btn1Element.addEventListener("click", () => {
+        pTag.classList.add('active')
+    })
+
+      btn2Element.addEventListener("click", () => {
+        pTag.classList.remove('active')
+    })
+
+      btn3Element.addEventListener("click", () => {
+        pTag.classList.toggle('active')
+    })
+
+    //pTag.classList.add()
+    // tagName.classObject.functionName(add)
+</script>
+
+</html>

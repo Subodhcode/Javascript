@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // 1 
+        // let l=[10,20,30,40,50,99,66];
+
+        // let newArrary=l.map((arrayValue,index)=>arrayValue+5)//map callback function mmang taa hai
+
+        // console.log(newArrary)
+
+
+        //2
+        //  let l=[10,20,30,40,50,99,66];
+
+        // let newArrary=l.map((arrayValue,index)=>{
+        //     return arrayValue+5
+        // })
+
+        // console.log(newArrary)
+
+
+        //3 filter
+        // let filterarray=l.filter((v,i)=>v%2==0)
+        // console.log(filterarray)
+
+       /*let filterarray=l.filter((v,i)=>{
+            if(v%2==0){
+            return v;
+            }
+            
+        })
+        console.log(filterarray)*/
+
+
+        // //4 Reduce
+        let l=[10,20,30,40,50,99,66];
+        let startvalue=5
+        let finalTot=l.reduce((collector,arrayValue)=>{
+            return collector=collector+arrayValue
+        },startvalue)
+        console.log(finalTot)
+    </script>
+</body>
+</html>

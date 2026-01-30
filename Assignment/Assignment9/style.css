@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    
+}
+.inner{
+    width: 700px;
+    margin: auto;
+   
+}
+.user_info{
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+#text{
+    padding: 8px 10px;
+    width: 300px;
+    outline: none;
+    text-align: left;
+    border-radius: 5px;
+}
+fieldset{
+    padding: 40px 30px;
+}
+.inputtag{
+    width: 300px;
+    padding: 8px 10px;
+}
+.inputbox{
+    width: 628px;
+    border: 1px solid black;
+    margin: 3px 0px;
+    padding: 7px 0px;
+    border-radius: 5px;
+  
+}
+#checkbox{
+    margin-left: 20px;
+   
+}
+
+.info textarea{
+    width: 628px;
+    height: 70px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+
+.btn{
+    text-align: center;
+    
+}
+
+.btn button{
+    padding: 8px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: inline;
+    margin: 0px 8px;
+    background-color: rgb(138, 41, 138);
+    color: white;
+}

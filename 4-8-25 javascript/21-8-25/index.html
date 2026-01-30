@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1Array distrucuture
+        // let l=[10,20,30,40,99]
+
+        // // let [n,m,d]=l
+
+        // // console.log(n,m,d)
+        // let [x, , y] = l; 
+        // console.log(x, y); // 10 30
+
+
+        //2 Rest operator...//spred operator
+        // let l=[10,20,30,40,99,100,110]
+
+        // let [n,m,...d]=l
+
+        // console.log(n,m,d)
+
+
+          //3 Shallow copy || Deep copy
+        // let l=[10,20,30,40,99,100,110]
+
+        // // let m=l//Deep copy
+        // let m=[...l]//shallow copy
+
+        // console.log("m",m)
+        // console.log("l",l)
+
+        // m.push(25)
+      
+        // console.log("m",m)
+        // console.log("l",l)
+
+
+        //4 
+        // function sumData(...allValue){//important
+        //         //...param Array
+        //         let sum=0
+        //         for(let v of allValue){
+        //             sum=sum+v
+        //         }
+        //         return sum
+        // }
+
+        // console.log(sumData(10,20,30,40,50,99,77,88))
+
+
+        //5
+        // let l=[10,20,30,40,50]
+        // a=99
+        // b=88
+
+        // let finalArray=[a,...l,b]
+        // console.log(finalArray)
+
+
+    //     //6 Array Reverse
+    //     function Arrayrev(aare){
+    //         let newArray=[]
+    //         //array=[25,99,77,55,65,85,25]
+    //         for(let v of aare){
+    //             newArray.unshift(v)
+    //         }
+    //         return newArray
+    //     }
+
+    //  console.log( Arrayrev([25,99,77,55,65,85,25])) 
+
+
+    //7 find the lowest value in array
+    //    function lowestValue(array){
+    //         let lowestValue=array[0]//25
+
+    //         for (let v of array){
+    //            if(v<lowestValue){
+    //             lowestValue=v
+    //            }
+    //         }
+    //         return lowestValue
+    //     }
+    //     console.log(lowestValue([25,99,77,55,5,65,85,25]));
+
+        //8 find the name which start from vowels
+        function checkName(array){
+            let vowels=["a","e","i","o","u"]
+            let finalArray=[]
+            for(let v of array){
+                let frstLetter=v[0].toLowerCase();
+                if(vowels.includes(frstLetter)){
+                    console.log(v)
+                }
+            }
+            return finalArray
+        }
+        let userArray=["subodh","shreya","Riddhi","Anjali","oval","Iceccream","Umbrella","Shanvi","Rishu"]
+        
+        console.log(checkName(userArray))
+
+
+    </script>
+</body>
+</html>

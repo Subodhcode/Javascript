@@ -1,0 +1,4 @@
+Dom->Document (pura page)
+    object->tag/Button
+    Modal->Object me chnages karne ka tarika
+    by using dom we can changes dynamically in our page

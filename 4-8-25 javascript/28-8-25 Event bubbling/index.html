@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .main {
+            width: 1170px;
+            margin: auto;
+         
+        }
+        .main h2{
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2>Welcome</h2>
+        <h2>IIP</h2>
+        <h2>WS</h2>
+        <h2>IIP</h2>
+        <h2>WS</h2>
+        <h2>IIP</h2>
+        <h2>WS</h2>
+    </div>
+</body>
+<script>
+    let allHeading = document.querySelectorAll(".main h2")
+    // console.log(allHeading)
+    // console.log(allHeading[1].innerHTML)
+    //NodeList ->Array type data
+    //[h2>Welcome</h2>,<h2>IIP</h2>,<h2>WS</h2>]
+
+    allHeading.forEach((e, i) => {
+
+        e.addEventListener("click", () => {
+            //All element ko black
+            allHeading.forEach((heading,index)=>{
+                if(i!=index){
+                    heading.style.color="black"
+                }
+            })
+
+            e.style.color = "red"
+        })
+    })
+    /*  let l=[10,203,40,99]
+      l.forEach((v,i)=>{
+          console.log(v,i);
+      })*/
+
+</script>
+
+</html>

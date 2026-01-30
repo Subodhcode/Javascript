@@ -1,0 +1,377 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+/*home row1*/
+
+.main{
+    width: 1000px;
+    margin: auto;
+}
+.row1{
+    width: 1000px;
+    height: 186px;
+    background-image: url("images/headerbg.jpg");
+    display: flex;
+   
+}
+.row1c1{
+    width: 250px;
+    margin-left: 20px;
+    height: 160px;
+    border: 0px solid blue;
+    margin-top: 15px;
+}
+.row1c2{
+    width: 400px;
+    height: 186px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+    text-transform: uppercase;
+    border: 0px solid red;
+}
+.row1c3{
+    width: 296px;
+    height: 132px;
+    margin: 15px;
+    padding: 15px;
+    background: url(images/topcontactbg.png);
+}
+.web{
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+.web a{
+    color: black;
+}
+.email{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.email a{
+    color: black;
+}
+.phone{
+    font-size: 22px;
+    font-weight: bold;
+}
+.phone a{
+    color: white;
+}
+
+/*row2*/
+.row2{
+    width: 1000px;
+    height: 50px;
+    background: url(images/menubg.jpg);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.menuitems{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background-image: url(images/menubackground.png);
+}
+
+.menuitems:hover{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemscontact{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemshome{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemshome a{
+    font-weight: bolder;
+    color: black;
+}
+.menuitemsabout{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemsabout a{
+    font-weight: bolder;
+    color: black;
+}
+.menuitemscourse{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemscourse a{
+    font-weight: bolder;
+    color: black;
+}
+.menuitemsgallery{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemsgallery a{
+    font-weight: bolder;
+    color: black;
+}
+.menuitemsenquairy{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemsenquairy a{
+    font-weight: bolder;
+    color: black;
+}
+.menuitemscontact{
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    padding-top: 12px;
+    margin-top: 6px;
+    background: url(images/menuactive.png);
+}
+.menuitemscontact a{
+    font-weight: bolder;
+    color: black;
+}
+.menuitems a{
+    color: black;
+    font-weight: bold;
+}
+
+/*row3*/
+.row3{
+    width: 1000px;
+    margin: 10px 0px;
+    display: flex;
+}
+.rowleft{
+    width: 213px;
+    height: 240px;
+    margin-left: 20px;
+}
+.rowleft a{
+    color: black;
+}
+.row3leftmenuitems{
+    height: 213px;
+    padding-top: 10px;
+    text-align: center;
+    height: 40px;
+    background: url(images/leftmenubg.png);
+}
+.row3leftmenuitems{
+    color: black;
+}
+.row3right{
+    width: 750px;   
+    height: 240px;
+    margin-left: 15px;
+    background: url(images/banner.gif);
+}
+.row4{
+    width: 1000px;
+    margin-bottom: 15px;
+    display: flex;
+}
+.row4c1{
+    width: 213px;
+    height: 189px;
+    background: url(images/whybg.jpg);
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+}
+.row4c1 h4{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    padding:8px 0px ;
+}
+.row4c1 ol{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.row4 ol li{
+    margin-top: 7px;
+}
+.row4c2{
+    width: 350px;
+    background: orange;
+    margin-left: 15px;
+    padding: 15px;
+}
+.row4c2 h4{
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+.course_inner {
+    font-size: 14px;
+}
+
+.row4c3{
+    width: 350px;
+    margin-left: 15px;
+}
+.row5{
+    width: 1000px;
+    height: 48px;
+    border-radius: 10px;
+    background: url(images/footer_middle.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.footer a{
+    color: black;
+    font-weight: bold;
+}
+
+/*About*/
+.row3rightInnerpage{
+    width: 750px;
+    background: white;
+    margin-left: 15px;
+    padding: 15px;
+    padding-bottom: 60px;
+}
+.row3rightInnerpage h1{
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+.row3rightInnerpage p{
+    margin-bottom:15px ;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+}
+.row3rightInnerpage h3{
+    margin-top: 15px;
+}
+.row3rightInnerpage ol{
+    margin-left:20px ;
+    margin-top: 20px;
+    line-height: 23px;
+}
+/*course Page*/
+.courseItem{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+/*Gallery*/
+.row3rightInnerpage img{
+    margin: 10px;
+}
+
+/*Contact Us*/
+.contact{
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.row3rightInnerpage a{
+    color: gray;
+    font-size: 18px;
+    margin-left: 13px;
+}
+
+/*Enquiry*/
+.forminput{
+    padding-bottom: 20px;
+}
+.formvalue{
+    padding-right: 55px;
+}
+
+/*form*/
+.formrow
+{
+	margin-bottom:20px;
+}
+.formlable
+{
+	float:left;
+	width:100px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.inputbox
+{
+	width:200px;
+	border:#5b5b5b 1px solid;
+	height:20px;
+	color:#5b5b5b;
+}
+.inputform
+{
+	font-size:12px;
+}
+.textarea
+{
+	width:200px;
+	border:#5b5b5b 1px solid;
+	height:100px;
+	color:#5b5b5b;
+	resize:none;
+}
+.button
+{
+	background:#09F;
+	border:none;
+	color:#FFF;
+	padding:10px 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	border-radius:10px;
+	margin:0px auto;
+	cursor:pointer;
+}
+

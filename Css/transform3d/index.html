@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 3D</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            perspective: 800px;
+            perspective-origin: bottom;
+        }
+        .main{
+            width: 500px;
+            height: 350px;
+            background-color: red;
+            transform-style:preserve-3d ;
+            transform: rotatex(45deg);
+        }
+        .inner{
+            width: 300px;
+            height: 250px;
+            background-color: yellow;
+            transform: rotatey(15deg);
+            transform-origin: top;
+            animation: innerrotate 4s infinite linear;
+        }
+        @keyframes innerrotate{
+            50%{
+                transform: rotateX(-10deg);
+            }
+            100%{
+                transform: rotateX(15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

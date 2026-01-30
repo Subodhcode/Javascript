@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool_tip</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 400px;
+            padding: 10px 15px;
+            font-size: 30px;
+            border: 0.1px solid red;
+            background-color: cyan;
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+        }
+        .main::before{
+            content: '';
+            display: inline-block;
+            border: 20px solid;
+            border-color: red transparent transparent transparent;
+            position: absolute;
+            top: 100%;
+            left:50%
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        Welcome To Wscube Tech
+    </div>
+</body>
+</html>

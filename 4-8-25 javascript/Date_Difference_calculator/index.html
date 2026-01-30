@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: aqua;
+        }
+
+        .main {
+            width: 300px;
+            padding: 20px;
+            margin: 100px auto;
+            background-color: white;
+        }
+
+        .main label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .main input {
+            width: 95%;
+            height: 30px;
+            padding: 5px 5px;
+        }
+
+        .main label {
+            margin-bottom: 10px;
+        }
+
+        .main button {
+            width: 100%;
+            color: white;
+            border: none;
+            background: rgb(237, 7, 7);
+            margin-top: 10px;
+            padding: 8px 0px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3>Date Difference Calculator</h3>
+        <div>
+            <label for="">From Date</label>
+            <input type="datetime-local" id="fromdate">
+        </div>
+        <div>
+            <label for="">To Date</label>
+            <input type="datetime-local" id="todate">
+        </div>
+        <button>Save</button>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector("button")
+    let fromDate = document.querySelector("#fromdate")
+    let toDate = document.querySelector("#todate")
+    btn.addEventListener("click", () => {
+        let fromDateObject = new Date(fromDate.value);
+        let toDateObject = new Date(toDate.value);
+        let fromDateObjectMillsecond = fromDateObject.getTime();
+        let toDateObjectMillsecond = toDateObject.getTime();
+        let difMilSecConvertSecond=(toDateObjectMillsecond-fromDateObjectMillsecond)/1000;
+        console.log(difMilSecConvertSecond)
+
+        let onemin=60;
+        let oneHour=onemin*60;
+        let onedaysec=oneHour*24;
+        console.log(onemin,oneHour,onedaysec)
+
+        let finaldays=Math.floor(difMilSecConvertSecond/onedaysec);
+        console.log("Days",finaldays)
+
+        let remSecUtlisDays=toDateObjectMillsecond % onedaysec;
+        let finalhour=Math.floor(remSecUtlisDays/oneHour)
+
+        console.log("Hours",finalhour)
+    })
+</script>
+
+</html>

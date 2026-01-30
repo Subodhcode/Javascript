@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            width: 1000px;
+            height: 100px;
+            background-color: aqua;
+            margin: 50px auto;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li{
+            padding: 10px 15px;
+            border: 0.1px solid red;
+        }
+        /* li:nth-child(1){
+            background-color: red;
+            color: white;
+        } */
+         li:first-child{
+            background-color: yellow;
+         }
+         li:last-child{
+            background-color: yellow;
+         }
+     
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Course</li>
+        <li>Gallery</li>
+        <li>Contact US</li>
+    </ul>
+</body>
+</html>

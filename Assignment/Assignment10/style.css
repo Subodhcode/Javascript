@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.first{
+    width: 100%;
+    /* background-color: rgb(200, 203, 232); */
+    background: url(images/spotlight-bg.webp);
+    /* border: 1px solid red; */
+    background-size: cover;
+    background-position: center 89%;
+}
+.innersection{
+    width: 1320px;
+    margin: 0px auto;
+    padding: 80px 0px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.innersection h1{
+    padding-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 44px;
+    padding: 0 15px;
+    background: url(images/spotlight-heading-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: inline;
+}
+.innersection>p{
+    font-size: 18px;
+    font-weight: 400;
+    margin:20px 0px;
+    color: white;
+}
+
+.inner_third{
+    display: flex;
+    justify-content: center;
+}
+
+.number_section{
+    flex-basis: 25%;
+}
+.inner_third .number_section {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+
+
+.inner_third p{
+    color: rgb(156, 178, 197);
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.inner_third hr{
+    width: 1px;
+    height: 100px;
+    background-color: rgb(92, 89, 89);
+    border: none;
+}
+
+.second{
+    width: 100%;
+    /* background-color: rgb(180, 230, 230); */
+}
+.innersectiontwo{
+    width: 1320px;
+    /* border: 1px solid red; */
+    margin: 120px auto;
+    display: flex;
+   justify-content: space-between;
+}
+
+#card{
+    flex-basis: 50%;
+   
+}
+
+.card .inner_card{
+    margin-bottom: 16px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 0px 1px grey;
+}
+
+.inner_card h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(10, 33, 52);
+}
+
+.inner_card p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(67, 80, 91);
+    margin: 15px 0;
+}
+
+.inner_card a{
+    color: #2699FB;
+}
+
+.inner_card:hover{
+    border:1px solid #2699FB;
+}
+.left h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(33, 37, 41);
+
+}
+
+.left p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(67, 80, 91);
+    margin: 40px 0;
+}
+
+.right{
+    background-image: url(images/iq-circle.webp),url(images/iq-dot-bg.webp);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 92% 92%, 6% 8%;
+    /* border: 1px solid red; */
+    padding: 90px;
+}
+
+.right img{
+    width: 100%;
+    height: 100%;
+}
+
+button{
+    color: white;
+    background: #2699FB;
+    border: 1px solid transparent;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    border:1px solid #2699FB;
+}

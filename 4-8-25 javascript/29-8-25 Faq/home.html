@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .main {
+            width: 1170px;
+            padding: 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore voluptates vitae eius earum fugit
+            corporis itaque! Voluptates, deleniti cumque libero doloremque neque maxime ab modi repellat est! Pariatur
+            laboriosam hic ipsa necessitatibus unde nesciunt nisi, tempore libero deserunt, id earum numquam, aliquam
+            ipsum. Temporibus incidunt explicabo possimus voluptate aperiam.
+        </p>
+        <button>Save</button>
+        <h1>Welcome To Ws</h1>
+    </div>
+</body>
+<script>
+    let mainElement = document.querySelector(".main")
+
+    for(let v of mainElement.children){
+        console.log(v)
+    }
+    console.log(mainElement.children[0])
+    console.log(mainElement.children[1])
+    console.log(mainElement.children[2])
+    // Main inner ke parts tags html collection
+    // html collection me forEach kaam nhi karega
+
+    console.log(mainElement.lastElementChild)
+    console.log(mainElement.firstElementChild)
+
+    let btn=document.querySelector("button")
+    console.log(btn.parentElement.parentElement);
+    console.log(btn.nextElementSibling)
+    console.log(btn.previousElementSibling)
+</script>
+
+</html>

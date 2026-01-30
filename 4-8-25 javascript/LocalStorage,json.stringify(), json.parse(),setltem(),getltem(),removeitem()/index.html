@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+      
+        form{
+            width:500px;
+            margin:auto;
+        }
+        form h3{
+            text-align: center;
+        }
+        form input{
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+        form button{
+            width: 101.5%;
+            padding: 10px 0px;
+            background-color: black;
+            margin-top: 10px;
+            border: none;
+            color: white;
+        }
+        table{
+            margin: auto;
+            width: 1170px;
+            border: 1px solid black;
+        }
+        table tr th,table tr td{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Enquiry Form</h3>
+        <div>
+            <input type="text" name="uname" placeholder="Enter Name">
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Enter Email">
+        </div>
+        <div>
+            <input type="text" name="phone" placeholder="Enter phone">
+        </div>
+        <div>
+            <button>Save</button>
+        </div>
+    </form>
+    <button id="clearbtn">clear all</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>Pradeep</td>
+                <td>subodht105@gmail.com</td>
+                <td>6354727987</td>
+                <td>
+                    <button class="delbtn" data-userid="0">Delete</button>
+                </td>
+                <td>
+                    <button>Edit</button>
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+</body>
+<script>
+    let form=document.querySelector("form")
+    let tbody=document.querySelector("table tbody")
+    form.addEventListener("submit",(event)=>{
+        let userOlddata=JSON.parse(localStorage.getItem("user"))??[]
+
+        let userObj={
+            uname:event.target.uname.value,
+            email:event.target.email.value,
+            phone:event.target.phone.value,
+        }
+
+        userOlddata.push(userObj)
+
+        localStorage.setItem('user',JSON.stringify(userOlddata))
+        userList()
+        event.target.reset();
+        event.preventDefault();
+    })
+
+    let userList=()=>{
+        tbody.innerHTML=''
+        let userOlddata=JSON.parse(localStorage.getItem("user"))??[]
+        let rows=''
+        userOlddata.forEach((element,index)=>{
+            rows+=`<tr>
+                <td>${index+1}</td>
+                <td>${element.uname}</td>
+                <td>${element.email}</td>
+                <td>${element.phone}</td>
+                <td><button onclick="removeRow(${index})">Delete</button></td>
+                 <td><button onclick="editRow(${index})">Edit</button></td>
+            </tr>`
+        })
+        tbody.innerHTML=rows;
+    }
+    userList()
+
+    let clearbtn=document.querySelector("#clearbtn");
+    clearbtn.addEventListener("click",()=>{
+        // localStorage.clear('city')
+         localStorage.removeItem('user')
+        
+        userList()
+    })
+
+   function removeRow(index){
+     let userOlddata=JSON.parse(localStorage.getItem("user"))??[]
+     userOlddata.splice(index,1)
+     localStorage.setItem('user',JSON.stringify(userOlddata))
+        userList()
+   }
+    
+
+   
+
+    function editRow(index){
+    let userOlddata = JSON.parse(localStorage.getItem("user")) ?? []
+
+    let user = userOlddata[index]
+
+    // Fill form with old data
+    form.uname.value = user.uname
+    form.email.value = user.email
+    form.phone.value = user.phone
+
+    // Set index to update later
+    editIndex = index
+}
+
+</script>
+</html>

@@ -1,0 +1,9 @@
+py-1-4px,2-8px,3-16,4-24,5-48
+1rem-16px
+px-padding left right,py padding top bottom,p all direction,pt top,pb bottom
+
+padding rule same work in margin
+
+gutter classess -12 px lekar aata hai
+gx-0 0px padding aata hai,gx-1->4px padding ,gx-2->8px padding
+gutter class most;y used in y axis

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*1 let n
+    try{
+         n=a;
+
+    }
+    catch(error){
+        n=error.message
+    }
+    finally{
+        console.log(n)
+    }*/
+
+
+    let n
+
+    function errorShow() {
+        try {
+            n=a
+        }
+        catch (error) {
+            n=error.message
+            return//return keyword bhi finally ko rok nhi payega
+        }
+        finally {
+            console.log(n)
+        }
+
+    }
+    errorShow()
+
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li>Electronics</li>
+            </ul>
+        </aside>
+
+        <!-- Products Section -->
+        <main class="products">
+
+        </main>
+
+    </div>
+
+</body>
+<script>
+    let UlEment = document.querySelector(".sidebar ul")
+    let catitem = ''
+    let getAllCategory = async () => {
+        let apires = await fetch('https://dummyjson.com/products/category/smartphones')
+        let data = await apires.json()//array [24 items]
+        // console.log(data)
+        //foreach works only with array,give value+index
+        data.products.slice(0, 15).forEach((categoryobj) => {
+            catitem += `<li>${categoryobj.brand}</li>`
+            // console.log(categoryobj);
+        })
+        UlEment.innerHTML = catitem
+    }
+
+    let ProductOuter=document.querySelector(".products")
+
+    let getProducts = async () => {
+        let apires = await fetch('https://dummyjson.com/products')
+        let data = await apires.json()//object{products:[]}
+        // data.products.forEach((product)=>{
+        // })
+        let { products } = data;//key ka naam array
+
+        let procuctItem = ''
+        products.slice(0,9).forEach((obj) => {
+            console.log(obj)
+            procuctItem += 
+            `<div class="product-card">
+            <img src="${obj.thumbnail}"">
+            <h3>${obj.title}</h3>
+            <p>${obj.price}</p>
+            <button>Add to Cart</button>
+      </div>`
+        })
+        ProductOuter.innerHTML=procuctItem
+    }
+    getProducts()
+    getAllCategory()
+
+
+    /* destructure example
+     let obj={
+         a:1,
+         b:2,
+         c:3
+     }
+     let {a}=obj*/
+</script>
+
+</html>

@@ -1,0 +1,19 @@
+Mutating Method
+
+push()
+pop()
+shift()
+unshift()
+splice()
+sort()
+Reverse()
+
+
+Non-Mutating Method
+
+concat()
+slice()
+includes()
+join()
+toString()
+toReversed()

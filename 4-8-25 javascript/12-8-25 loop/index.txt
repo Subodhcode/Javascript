@@ -1,0 +1,9 @@
+core loop -> for loop, while loop, do while ,for in, for of, for each,Array map(),filter (), reduce(),find()
+
+loop->start-1
+      stop-10
+      step ->increment/decrement
+
+
+      loop type >entry controlled loop, exit controlled loop
+      for->entry controlled loop

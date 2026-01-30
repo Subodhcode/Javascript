@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="cityName">
+        <button>Save</button>
+    </form>
+</body>
+<script>
+    let form=document.querySelector("form")
+    form.addEventListener("submit",(event)=>{
+         let cNameList=JSON.parse(localStorage.getItem('cityName'))??[];//json to array[jodhpur]
+        let cityName=event.target.cityName.value;//pune
+         cNameList.push(cityName)
+      
+        localStorage.setItem('city',JSON.stringify(cNameList))//array to json
+        event.preventDefault();//page ke refersh ko rok dega
+        // alert("hello")
+    })
+
+  
+ 
+</script>
+</html>

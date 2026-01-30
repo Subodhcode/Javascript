@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <figure><img src="Logo.svg" alt="" width="80"></figure>
+        <nav class="">
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Project Highlight</a></li>
+                <li><a href="#">Site Plan</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Price List</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars" id="micon"> </i>
+    </header>
+</body>
+<script>
+    let micon = document.querySelector("#micon")
+    let nav = document.querySelector("nav")
+    micon.addEventListener("click", () => {
+        nav.classList.toggle('showMenu')
+        micon.classList.toggle('fa-bars')
+        micon.classList.toggle('fa-xmark')
+    })
+</script>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1 key value pairs
+        let obj={
+            companyName:'wscubeTech',
+            name:'Pradeep Rai ws',
+            email:'subodht105@gmail.com',
+            courseName:'Mern',
+            userName:'Pradeep Rai',
+            20:60,
+            sum:function(n,m){
+                return n+m
+            }
+        }    
+
+        // delete obj.userName
+        // console.log(obj)
+
+        // console.log(obj.sum(25,30));
+
+        //obejct destrucuture
+        // let {companyName,userName,...rest}=obj
+        // console.log(companyName);
+        // console.log(userName);
+        // console.log(rest)
+
+        // console.log(obj)
+        // console.log(obj['courseName'])
+        // console.log(obj.courseName)
+
+        // //number
+        // console.log(obj['20'])
+
+        // //objet new data puch karna hai
+        // obj['duration']="6 Month";
+       //obj.companyName="Wscubetech jodhpur"//check key all ready exist...Data Update
+
+
+        // console.log(obj)
+
+
+
+        //5
+       /* let userName="ws@123"//value
+        let password="123456"
+
+        let user={
+            userName,//key
+            password,
+            age:12
+        }
+        console.log(user)*/
+
+
+        //6
+       /* let calculator={
+            sum:function(n,m){
+                return n+m
+            },
+            min:function(n,m){
+                return n-m
+            },
+            mul:function(n,m){
+                return n*m
+            },
+            div:function(n,m){
+                return n/m
+            },
+        }
+        console.log(calculator.sum(50,50))
+        console.log(calculator.min(50,50))
+        console.log(calculator.mul(50,50))
+        console.log(calculator.div(50,50))*/
+
+
+        //7
+        let user={
+            name:'ws',
+            email:'ws@gmail.com',
+            phone:6354727987,
+            age:12,
+            courseName:'Mern'
+        }
+        //object key get
+
+        // let allkeys=Object.keys(user);//array me store
+        // let allValue=Object.values(user);//array me store
+        // console.log(allkeys);
+        // console.log(allValue);
+
+        //object me koi loop kaam nhi karta ,sirf for in loop kaam karta hai wo bas key nikal ke deta hai
+        for(let key in user){
+            console.log(key)
+        }
+    </script>
+</body>
+</html>

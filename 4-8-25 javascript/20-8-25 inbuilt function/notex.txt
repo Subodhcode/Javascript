@@ -1,0 +1,25 @@
+funcation->js->predefined funcation
+->user defined function
+
+Hoiesting in js->🔹 Simple Answer:
+
+“Hoisting JavaScript ka behavior hai jisme variables aur function declarations ko code ke top pe le jaaya jata hai execution/implementation se pehle. Values assignment ke liye baad me hoti hain.”
+
+3️⃣ Benefits / Features
+
+✅ Functions ko pehle call karne ki flexibility
+
+✅ Code ko organized aur readable banata hai
+
+✅ var ke saath errors prevent karta hai
+
+✅ Memory allocation pehle ho jata hai → smooth execution
+
+✅ Large programs me execution predictable hota hai
+
+✅ JavaScript ke scope rules follow karna easy
+
+
+funcation funcation-name(){
+    body
+}

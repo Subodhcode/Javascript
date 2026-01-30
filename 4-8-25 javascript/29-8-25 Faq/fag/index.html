@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .faq_section {
+            padding: 50px 0px;
+        }
+
+        .faq_section h1 {
+            text-align: center;
+        }
+
+        .faqOuter {
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 40px;
+
+        }
+
+        .faqItem{
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .faqItem h3{
+            padding: 10px ;
+            background-color: gold;
+            position: relative;
+            cursor: pointer;
+        }
+        .faqItem h3 span{
+            position: absolute;
+            right: 10px;
+        }
+        .ans{
+            transform:scaleY(0);
+            max-height:0px ;
+            transform-origin: top;
+            transition: transform 0.2s ease,max-height 0.3s ease;
+        }
+        .showAns{
+            padding: 10px;
+            transform: scaleY(1);
+            max-height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="faq_section">
+        <h1>FAQs About Leicester Taxi Service</h1>
+        <div class="faqOuter">
+            <div class="faqItem">
+                <h3>1 How do i book a taxi? <span>+</span></h3>
+                <div class="ans ">
+                   1 Online or all our customer support team to receive a confirmation instantly
+                </div>
+            </div>
+            <div class="faqItem">
+                <h3>2 How do i book a taxi?<span>+</span></h3>
+                <div class="ans">
+                   2 Online or all our customer support team to receive a confirmation instantly
+                </div>
+            </div>
+            <div class="faqItem">
+                <h3>3 How do i book a taxi?<span>+</span></h3>
+                <div class="ans">
+                   3 Online or all our customer support team to receive a confirmation instantly
+                </div>
+            </div>
+            <div class="faqItem">
+                <h3>4 How do i book a taxi?<span>+</span></h3>
+                <div class="ans">
+                   4 Online or all our customer support team to receive a confirmation instantly
+                </div>
+            </div>
+            <div class="faqItem">
+                <h3>5 How do i book a taxi?<span>+</span></h3>
+                <div class="ans">
+                   5 Online or all our customer support team to receive a confirmation instantly
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <script>
+        allQuestion=document.querySelectorAll(".faqItem h3")//it will give node list
+
+        allQuestion.forEach((question,index)=>{
+            question.addEventListener("click",()=>{
+                //other question ->hide ans
+
+                allQuestion.forEach((q,i)=>{
+                    if(index!=i){
+                        q.lastElementChild.innerHTML="+"
+                        q.nextElementSibling.classList.remove("showAns")
+                    }
+                })
+
+                //clicke question
+                if(question.lastElementChild.innerHTML=="+"){
+                    question.lastElementChild.innerHTML="-";
+                }
+                else{
+                    question.lastElementChild.innerHTML="+";
+                }
+                question.nextElementSibling.classList.toggle('showAns')
+            })
+        })
+    </script>
+</html>

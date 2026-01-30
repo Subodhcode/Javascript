@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Random Color</button>
+</body>
+<script>
+    let btn = document.querySelector("button");
+    //rgb()red,green,blue  -0 - 255
+    // console.log(Math.random()*255)
+    //math.floor(30.1)//30
+    //0  -1 koi random number ganerate karta hai
+    let body=document.querySelector("body")
+    btn.addEventListener("click", () => {
+        let redRandomCode = Math.floor(Math.random() * 255);
+        let greenRandomCode = Math.floor(Math.random() * 255);
+        let blueRandomCode = Math.floor(Math.random() * 255);
+        body.style.background=`rgb(${redRandomCode},${greenRandomCode},${blueRandomCode})`
+    })
+</script>
+
+</html>

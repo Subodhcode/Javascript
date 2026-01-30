@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #080E24
+}
+@keyframes rotatediv{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.main{
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    position: relative;
+    border: 1px solid red;
+}
+.part_1{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    animation:rotatediv 20s 0s infinite linear
+    
+}
+.part1Dot{
+    width: 15px;
+    height: 15px;
+    background: lightblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+.part_2{
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    animation:rotatediv 16s  infinite linear
+}
+.parts2Dot{
+    width: 15px;
+    height: 15px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 80px;
+}
+
+.part_3{
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    animation:rotatediv 10s  infinite linear
+}
+.parts3Dot{
+    width: 15px;
+    height: 15px;
+    background: rgb(201, 40, 107);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+
+.part_4{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: absolute;
+    left: 90px;
+    top: 90px;
+    animation:rotatediv 8s  infinite linear
+}
+.parts4Dot{
+    width: 15px;
+    height: 15px;
+    background: rgb(6, 235, 33);
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 80px;
+    animation:rotatediv 3s  infinite linear
+}
+.whitedots{
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+}

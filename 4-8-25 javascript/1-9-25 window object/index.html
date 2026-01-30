@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+
+    h1{
+        color: #00ffcc;
+        font-size: 4rem;
+        letter-spacing: 3px;
+        padding: 20px 40px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
+    }
+    h1{
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #00ffcc;
+    }
+    to {
+        box-shadow: 0 0 30px #00ffcc;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <h1>07:35:15 PM</h1>
+</body>
+<script>
+    let h1Element=document.querySelector("h1")
+    let digitalClock = () => {
+        let dateObj = new Date()
+
+        // let currentDate=dateObj.getDate()
+        let currentDate = dateObj.getDate() < 10 ? "0" + dateObj.getDate() : dateObj.getDate()
+        let currentHour = dateObj.getHours() > 12 ? dateObj.getHours() - 12 : dateObj.getHours()
+        let type = dateObj.getHours() > 12 ? "Pm" : "AM";
+        let currentMin = dateObj.getMinutes() < 10 ? "0" + dateObj.getMinutes() : dateObj.getMinutes()
+        let getCurrentSecond = dateObj.getSeconds() < 10 ? "0" + dateObj.getSeconds() : dateObj.getSeconds()
+        currentHour = currentHour < 10 ? "0" + currentHour : currentHour
+        // console.log(dateObj.getDate()) 
+        // console.log(dateObj.getHours())
+        // console.log(dateObj.getMinutes())
+        // console.log(dateObj.getSeconds())
+        console.log(getCurrentSecond)
+        console.log(currentMin)
+        console.log(currentHour)
+        console.log(currentDate)
+        console.log(type)
+
+        h1Element.innerHTML=`${currentHour}:${currentMin}:${getCurrentSecond}:${type}`;
+        //note->new keyword in js built in class
+    }
+    digitalClock()
+
+    setInterval(digitalClock,1000)
+
+
+</script>
+
+</html>
