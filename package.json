@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/Subodhcode/Web-Development-2025/issues"
   },
-  "homepage": "https://github.com/Subodhcode/Web-Development-2025#readme"
+  "homepage": "https://github.com/Subodhcode/Web-Development-2025#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
 }

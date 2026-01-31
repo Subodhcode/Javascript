@@ -1,0 +1,21 @@
+step1
+npm install tailwindcss @tailwindcss/vite
+
+step 2
+vite.config.js
+
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+step 3
+index.css
+@import "tailwindcss";
+
+step 4
+npm run dev
