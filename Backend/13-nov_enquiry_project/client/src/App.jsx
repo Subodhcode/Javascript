@@ -1,26 +1,101 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState([])
+  let [editData,setEditdata]=useState(null)
 
-  let saveEnquiry=(e)=>{
+  let saveEnquiry = (e) => {
     e.preventDefault()
-    let obj={
-      studentName:e.target.studentName.value,
-      studentEmail:e.target.studentEmail.value,
-      studentPhone:e.target.studentPhone.value
+ let obj = {
+      studentName: e.target.studentName.value,
+      studentEmail: e.target.studentEmail.value,
+      studentPhone: e.target.studentPhone.value
     }
-    axios.post("http://localhost:9000/student/create",obj)
-    .then((res)=>res.data)
-    .then((finalres)=>{
-      console.log(finalres);
-    })
-    console.log(obj)
+    if(editData){
+      //update
+      axios.put(`http://localhost:9000/student/update/${editData._id}`,obj)
+       .then((res) => res.data)
+      .then((finalres) => {
+        console.log(finalres);
+
+        // console.log(obj)
+        if (finalres._status) {
+          getEnquiry()
+          setEditdata(null)
+          e.target.reset()
+        }
+        else {
+          alert(finalres._message)
+        }
+      })
+    }
+    else{
+ axios.post("http://localhost:9000/student/create", obj)
+      .then((res) => res.data)
+      .then((finalres) => {
+        console.log(finalres);
+
+        // console.log(obj)
+        if (finalres._status) {
+          getEnquiry()
+          e.target.reset()
+        }
+        else {
+          alert(finalres._message)
+        }
+      })
+    }
+   
+   
   }
+
+
+  let getEnquiry = () => {
+    axios.get('http://localhost:9000/student/view')
+      .then((res) => res.data)
+      .then((finalres) => {
+        // console.log(finalres)
+        if (finalres._status) {
+          setData(finalres.data)
+        }
+      })
+  }
+
+  let deleteData = (id) => {
+    // alert(id)
+    if(confirm("Are u sure to delte")){
+         axios.delete(`http://localhost:9000/student/delete/${id}`)
+      .then((res) => res.data)
+      .then((finalres) => {
+        // console.log(finalres)
+        if (finalres._status) {
+          getEnquiry()
+        }
+      })
+    }
+   
+  }
+
+  let editRowData=(id)=>{
+    
+       axios.get(`http://localhost:9000/student/view/${id}`)
+      .then((res) => res.data)
+      .then((finalres) => {
+        // console.log(finalres)
+        if (finalres._status) {
+          setEditdata(finalres.data)
+          //editData=object
+        }
+      })
+  }
+
+  useEffect(() => {
+    getEnquiry()
+  },[])
 
   return (
     <>
@@ -35,6 +110,7 @@ function App() {
               <input
                 type="text"
                 name='studentName'
+                defaultValue={editData ? editData.studentName : ""}
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your name"
               />
@@ -44,6 +120,7 @@ function App() {
               <input
                 type="email"
                 name="studentEmail"
+                  defaultValue={editData ? editData.studentEmail : ""}
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your email"
               />
@@ -53,15 +130,16 @@ function App() {
               <input
                 type="tel"
                 name='studentPhone'
+                  defaultValue={editData ? editData.studentPhone : ""}
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your phone"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
-            >
-              Submit
+              className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition
+             cursor-pointer">
+              {editData ? "Update" : "Save"}
             </button>
           </form>
         </div>
@@ -72,6 +150,7 @@ function App() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-gray-200">
+                <th className="py-2 px-4 border">Sr.No</th>
                 <th className="py-2 px-4 border">Name</th>
                 <th className="py-2 px-4 border">Email</th>
                 <th className="py-2 px-4 border">Phone</th>
@@ -79,38 +158,42 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <tr className="hover:bg-gray-100">
-                <td className="py-2 px-4 border">John Doe</td>
-                <td className="py-2 px-4 border">john@example.com</td>
-                <td className="py-2 px-4 border">1234567890</td>
-                <td className="py-2 px-4 border space-x-2">
-                  <button className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition">
-                    Edit
-                  </button>
-                  <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-              <tr className="hover:bg-gray-100">
-                <td className="py-2 px-4 border">Jane Smith</td>
-                <td className="py-2 px-4 border">jane@example.com</td>
-                <td className="py-2 px-4 border">0987654321</td>
-                <td className="py-2 px-4 border space-x-2">
-                  <button className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition">
-                    Edit
-                  </button>
-                  <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
-                    Delete
-                  </button>
-                </td>
-              </tr>
+              {
+                data.length >= 1 ?
+                  data.map((obj, index) => {
+                    return (
+                      <tr className="hover:bg-gray-100" >
+                        <td className="py-2 px-4 border">{index + 1}</td>
+                        <td className="py-2 px-4 border">{obj.studentName}</td>
+                        <td className="py-2 px-4 border">{obj.studentEmail}</td>
+                        <td className="py-2 px-4 border">{obj.studentPhone}</td>
+                        <td className="py-2 px-4 border space-x-2">
+                          <button onClick={()=>editRowData(obj._id)} className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition cursor-pointer">
+                            Edit
+                          </button>
+                          <button  onClick={() => deleteData(obj._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition cursor-pointer">
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    )
+                  })
+
+                  :
+
+                  <tr>
+                    <td colSpan={6}>No Data Found</td>
+                  </tr>
+
+              }
+
+
               {/* Add more rows dynamically later */}
             </tbody>
           </table>
         </div>
 
-      </div>
+      </div >
 
 
 
