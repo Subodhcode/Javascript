@@ -1,0 +1,2 @@
+ecommmerc->client,server
+server->npm i express,npm i cors,npm i dotenv
