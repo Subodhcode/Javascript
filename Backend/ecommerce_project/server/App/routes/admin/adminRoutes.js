@@ -1,10 +1,12 @@
 const express=require("express");
 const { colorRoutes } = require("./colorRoutes");
-const { materialRoutes } = require("./materailRoutes");
+const {  MaterailRoute } = require("./materailRoutes");
+const { FaqRoutes } = require("./FaqRoutes");
 let adminRoutes=express.Router()
 
 adminRoutes.use("/color",colorRoutes)
-adminRoutes.use("/materail",materialRoutes)
+adminRoutes.use("/materail",MaterailRoute)
+adminRoutes.use("/faq",FaqRoutes)
 //http://localhost:8000/admin/color
 //http://localhost:8000/admin/login
 // adminRoutes.post("/login",(req,res)=>{

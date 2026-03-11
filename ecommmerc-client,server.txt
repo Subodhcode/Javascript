@@ -1,2 +1,9 @@
 ecommmerc->client,server
-server->npm i express,npm i cors,npm i dotenv
+server->npm i express,npm i cors,npm i dotenv, npm init -y
+
+blog and schema
+modal same hoga website or backend ke liye admin ke liye
+
+dono me same hogi tho do folder nhi banae ka , ye common hoga
+
+regix- pattern hota hai , wo control karta hai validation

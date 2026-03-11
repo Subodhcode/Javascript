@@ -1,44 +1,18 @@
 let express=require("express")
-let materialRoutes=express.Router()
+const { MaterialCreate, MaterialView, MaterialDelete, MaterialUpdate } = require("../../controllers/admin/materialControl")
 
-materialRoutes.post('/create',(req,res)=>{
-    res.send(
-        {
-            _status:true,
-            _message:"color Added"
-        }
-    )
-})
+let MaterailRoute=express.Router()
+
+MaterailRoute.post('/create',MaterialCreate)
 
 
-materialRoutes.get('/view',(req,res)=>{
-    res.send(
-        {
-            _status:true,
-            _message:"color found"
-        }
-    )
-})
+MaterailRoute.get('/view',MaterialView)
 
 
-materialRoutes.delete('/delete',(req,res)=>{
-    res.send(
-        {
-            _status:true,
-            _message:"color Deleted"
-        }
-    )
-})
+MaterailRoute.delete('/delete',MaterialDelete)
 
 
-materialRoutes.put('/updated',(req,res)=>{
-    res.send(
-        {
-            _status:true,
-            _message:"color updated"
-        }
-    )
-})
+MaterailRoute.put('/update/:id',MaterialUpdate)
 
 
-module.exports={materialRoutes}
+module.exports={MaterailRoute}
